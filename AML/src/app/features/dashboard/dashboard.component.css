@@ -1,0 +1,49 @@
+.row{
+    margin-bottom: 15px;;
+}
+table {
+    width: 100%;
+  }
+  /* .mat-table thead{
+    background-color: #3a3a3a;
+  } */
+  /* .mat-form-field-appearance-outline .mat-form-field-infix{
+    padding: 0px !important;
+  } */
+  .mat-card-title {
+   
+    color: #3d5cfc;
+    font-size: 14px;
+    text-align: center;
+}
+.mat-card-content p{
+  text-align: center;
+  color: #3d5cfc;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+.mat-card-actions p{
+  text-align: center;
+  font-size: 13px;
+}
+.mat-card-subtitle p{
+  text-align: center;
+  color: #3d5cfc;
+}
+.mat-card-subtitle span{
+  color: #000;
+}
+.mat-menu-item .mat-icon{
+  margin-right: 0px;
+}
+ul#menu li {
+  display:inline;
+  padding: 5px;
+}
+
+.dcard{
+  width: 185px;
+  padding: 20px 0px;
+}

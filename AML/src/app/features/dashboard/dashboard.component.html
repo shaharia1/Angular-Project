@@ -1,0 +1,222 @@
+<div class="container-fluid">
+  <!-- <h1 style="margin-top: 10px;">DashBoard</h1> -->
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-md-12">
+      <mat-card class="example-card">
+        <mat-card-title>
+                   
+          <h1 style="text-align: left;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="24" viewBox="0 0 19 24">
+              <g id="Group_102" data-name="Group 102" transform="translate(-299 -183)">
+                <circle id="Ellipse_1" data-name="Ellipse 1" cx="9.5" cy="9.5" r="9.5" transform="translate(299 183)" fill="#10449b"/>
+                <circle id="Ellipse_2" data-name="Ellipse 2" cx="7" cy="7" r="7" transform="translate(299 193)" fill="#3d5cfc"/>
+              </g>
+            </svg> 
+            Paygate님 Dashboard 입니다</h1>
+        </mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <div class="row">
+            <div class="col-md-8">
+              <h4>페이게이트 서비스 현황을 한 눈에 볼 수 있는 Dashboard </h4>
+            </div>
+            <div class="col-md-4" align="right">
+
+
+              <ul id="menu">
+                <li>
+                    <input type="text" placeholder="" style=" padding: 5px;">
+                </li>
+                <li>
+                    <button mat-raised-button style="background-color: #3a3a3a;color: #fff;">
+                        <mat-icon>search</mat-icon>검색
+                    </button>
+                </li>
+
+            </ul>
+
+              <!-- <input type="text" placeholder="" style="margin-left: 76px;"> -->
+              
+              <!-- <span>
+                <mat-icon>search</mat-icon>Search
+              </span> -->
+              <!-- <span style="float: right; margin-top: -12px; ">
+              <button mat-menu-item>
+                <mat-icon>search</mat-icon>
+                <span>검색</span>
+              </button>
+            </span> -->
+            
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-2 ">
+      <mat-card class="example-card dcard">
+        <mat-card-title>KYC검토필요 유저수</mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <p>541</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>541</p>         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-2">
+      <mat-card class="example-card dcard">
+        <mat-card-title>혐의거래 건수</mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <p>25</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>541</p>         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-2 ">
+      <mat-card class="example-card dcard">
+        <mat-card-title>RBA 일정 스코어 이상 건수</mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <p>12</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>541</p>         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-2">
+      <mat-card class="example-card dcard">
+        <mat-card-title>EDD로 보내진 건 수 </mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <p>3</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>541</p>         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-2">
+      <mat-card class="example-card dcard">
+        <mat-card-title>STR 목록</mat-card-title>
+        <!-- <mat-card-subtitle>something</mat-card-subtitle> -->
+        <mat-card-content>
+          <p>3</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>541</p>         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-2">
+      <div class="row" style="margin-bottom: 7px;">
+        <div class="col-md-12">
+        
+          <mat-card class="example-card">
+            <mat-card-title style="text-align: left;">
+              검토대상
+              <span style="float: right;">
+                120
+              </span>
+            </mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 7px;">
+        <div class="col-md-12">
+          <mat-card class="example-card">
+            <mat-card-title style="text-align: left;">
+              승인대상
+              <span style="float: right;">
+                120
+              </span>
+            </mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 7px;">
+        <div class="col-md-12">
+          <mat-card class="example-card">
+            <mat-card-title style="text-align: left;">
+              신청대상
+              <span style="float: right;">
+                120
+              </span>
+            </mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-3">
+    <mat-card>
+      <mat-card-title>KYC검토필요 유저수</mat-card-title>
+        <mat-card-subtitle>  <p>541 <span >↓ 55</span></p></mat-card-subtitle>
+        <mat-card-content>
+          <canvas #myBarChart></canvas>
+        </mat-card-content>
+       
+    </mat-card>    
+  </div>
+  <div class="col-md-3">
+    <mat-card>
+      <mat-card-title>혐의거래 건수</mat-card-title>
+        <mat-card-subtitle>  <p>541 <span >↓ 55</span></p></mat-card-subtitle>
+        <mat-card-content>
+          <canvas #myBarChart1></canvas>
+        </mat-card-content>
+       
+    </mat-card>    
+  </div>
+  <div class="col-md-3">
+    <mat-card>
+      <mat-card-title>RBA 일정 스코어 이상 건수</mat-card-title>
+        <mat-card-subtitle>  <p>541 <span >↓ 55</span></p></mat-card-subtitle>
+        <mat-card-content>
+          <canvas #myBarChart2></canvas>
+        </mat-card-content>
+       
+    </mat-card>    
+  </div>
+  <div class="col-md-3">
+    <mat-card>
+      <mat-card-title>혐의거래 건수</mat-card-title>
+        <mat-card-subtitle> <p>541 <span >↓ 55</span></p> </mat-card-subtitle>
+        <mat-card-content>
+          <canvas #myBarChart3></canvas>
+        </mat-card-content>
+       
+    </mat-card>    
+  </div>
+
+  
+</div>
+
+
+
+<!-- <div>
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+</div> -->
+
+
+
+
+</div>

@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-toolbar-row, .mat-toolbar-single-row{
+    background-color: #cdd5fe;padding: 0px 5px;height: 44px;
+  }
+  span{
+    color: #808393;
+  }
+  .mat-icon-button i, .mat-icon-button .mat-icon {
+    
+    color: #3d5cfc;
+}

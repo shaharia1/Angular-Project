@@ -1,0 +1,55 @@
+<div class="body">
+    <div class="wrapper">
+        <div class="logo">
+
+            <img src="assets/paygate_c.png">
+
+        </div>
+        <div class="text-center mt-4 name">
+            <p style="padding: 15px 0px;" align="center">SIGN IN</p>
+        </div>
+        <!-- <form class="p-3 mt-3">
+
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input ngModel (ngModelChange)="nameChanged($event)" type="text" name="userName" id="userName" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input ngModel (ngModelChange)="passwordChanged($event)" type="password" name="password" id="pwd" placeholder="Password">
+            </div>
+            <button (click)="login()" class="btn mt-3">Login</button>
+        </form> -->
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input  matInput  ngModel (ngModelChange)="nameChanged($event)" type="text" placeholder="Username">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input  matInput  ngModel (ngModelChange)="passwordChanged($event)" type="password" placeholder="Password">
+          </mat-form-field>
+
+          <button (click)="login()" class="btn mt-3">Login</button>
+
+          <div class="newRegistration">
+<!--            <a routerLink="/registration">New Registration?</a>-->
+          </div>
+
+          <!-- <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field> -->
+
+        <!-- <div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div> -->
+        <div class="footer">
+            &copy; AML {{year}}
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,137 @@
+<div class="body">
+    <div class="wrapper">
+        <div class="logo">
+
+            <img src="assets/paygate_c.png">
+
+        </div>
+        <div class="text-center mt-4 name" >
+            <p style="padding: 10px 0px 5px 0px;" align="center">로그인</p>
+            
+        </div>
+        
+        <!-- <div>
+        <div class="row" >
+            <div class="col-md-2" align="left">
+                <p style="padding-top: 4px">이메일</p>
+            </div>
+            <div class="col-md-10" align="right">
+                <p >IP 보안 &nbsp; <mat-slide-toggle>ON</mat-slide-toggle></p>
+            </div>
+        </div>       
+        
+        <mat-form-field appearance="outline">
+            <mat-label>이메일</mat-label>
+            <input  matInput  ngModel (ngModelChange)="nameChanged($event)" type="text" placeholder="이메일">
+            <mat-error *ngIf="invalid">{{getErrorMessage()}}</mat-error> 
+        </mat-form-field>
+
+          <div class="row" style="margin-top: -15px; margin-bottom:20px;">
+            <div class="col-md-8" align="left">
+                <a href="">이메일을 잊으셨나요? </a>
+            </div>
+            <div class="col-md-4" align="right">
+                <a href="">회원가입</a>
+            </div>
+        </div>
+    </div> -->
+          <!-- <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input  matInput  ngModel (ngModelChange)="passwordChanged($event)" type="password" placeholder="Password">
+          </mat-form-field> -->
+          <mat-tab-group  [(selectedIndex)]="selectedIndex"
+      (selectedTabChange)="tabChanged($event)">
+      <mat-tab >
+        
+        <div style="margin-bottom: 30px;">
+            <p style="padding-bottom: 15px;font-size: 15px;" align="center">회사 메일 계정을 사용하여 로그인해 주세요</p>
+        </div>
+
+        <div class="row" >
+            <div class="col-md-2" align="left">
+                <p style="padding-top: 4px">이메일</p>
+            </div>
+            <div class="col-md-10" align="right">
+                <p >IP 보안 &nbsp; <mat-slide-toggle>ON</mat-slide-toggle></p>
+            </div>
+        </div>       
+        
+        <mat-form-field appearance="outline">
+            <mat-label>이메일</mat-label>
+            <input  matInput  ngModel (ngModelChange)="nameChanged($event)" type="text" placeholder="이메일">
+            <mat-error *ngIf="invalid">{{getErrorMessage()}}</mat-error> 
+        </mat-form-field>
+
+          <div class="row" style="margin-top: -15px; margin-bottom:20px;">
+            <div class="col-md-8" align="left">
+                <a href="">이메일을 잊으셨나요? </a>
+            </div>
+            <div class="col-md-4" align="right">
+                <a href="">회원가입</a>
+            </div>
+        </div>
+        <button (click)="next()" class="btn mt-3">다음</button>
+      </mat-tab>
+
+      <!-- next tab -->
+      <mat-tab >
+        <div style="margin-bottom: 30px;">
+            <p style="font-size: 13px; margin-bottom: 5px;" align="center">비밀번호를 입력해주세요.</p>
+            <p style="font-size: 13px;" align="center">처음 로그인하는 경우 반드시 비밀번호를 변경해 주세요</p>
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    <svg style="width: 25px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> 
+                        <g> <path fill="none" d="M0 0h24v24H0z"/> 
+                            <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM6.023 15.416C7.491 17.606 9.695 19 12.16 19c2.464 0 4.669-1.393 6.136-3.584A8.968 8.968 0 0 0 12.16 13a8.968 8.968 0 0 0-6.137 2.416zM12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/> 
+                        </g> 
+                    </svg>
+                </li>
+                <li>
+                    <p float="right"> {{UserEmail}}</p>
+                </li>
+            </ul>
+            
+            <!-- <mat-icon>account_circle</mat-icon> -->
+            
+        </div>
+
+        <div class="row" >
+            <div class="col-md-12" align="left">
+                <p style="padding-top: 4px">비밀번호 입력</p>
+            </div>
+            
+        </div>   
+        <mat-form-field appearance="outline">
+            <mat-label>비밀번호 입력</mat-label>
+            <input  matInput  ngModel (ngModelChange)="passwordChanged($event)" [type]="hide ? 'text' : 'password'" placeholder="비밀번호 입력">
+            <mat-error *ngIf="invalid">{{getErrorMessage()}}</mat-error> 
+        </mat-form-field>          
+
+          <div class="row" style="margin-top: -15px; margin-bottom:20px;">
+            <div class="col-md-8" align="left">
+                <mat-checkbox class="example-margin" [(ngModel)]="hide">비밀번호 표시</mat-checkbox>
+            </div>
+            <div class="col-md-4" align="right">
+                <a href="">비밀번호 찾기</a>
+            </div>
+        </div>
+        <button (click)="login()" class="btn mt-3">다음</button>
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+
+         
+
+
+        <div class="footer">
+            &copy; AML {{year}}
+        </div>
+    </div>
+</div>
+
+

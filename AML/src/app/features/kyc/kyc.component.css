@@ -1,0 +1,48 @@
+.row{
+    margin-bottom: 15px;;
+}
+table {
+    width: 100%;
+  }
+  /* .mat-table thead{
+    background-color: #3a3a3a;
+  } */
+  .mat-raised-button{
+    padding: 0px;
+  }
+  tr.mat-header-row{
+    background-color: #3a3a3a;
+  }
+  th.mat-header-cell{
+    color:#fff;
+  }
+  .table thead th {
+    color:#fff;
+    background-color: #3a3a3a;
+    text-align: center;
+    padding: 13px 5px;
+}
+
+.table td, .table th{
+  padding: 10px;
+    border-top: 0px;
+    text-align: center;
+}
+
+
+/* // row click css */
+
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

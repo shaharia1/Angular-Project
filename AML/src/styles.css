@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+/* html{
+    background-color: aquamarine;
+} */
+/* @import "node_modules/bootstrap/dist/css/bootstrap.css"; */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* @import '@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+
+/* // new css impor */
+@font-face {
+  font-family: NanumSquare-Regular;
+  src: url(assets/fonts/NanumSquare-Regular.ttf);
+}
+
+@font-face {
+  font-family: NanumSquare-Bold;
+  src: url(assets/fonts/NanumSquare-Bold.ttf);
+}
+
+@font-face {
+  font-family: NotoSansKR-Regular;
+  src: url(assets/fonts/NotoSansKR-Regular.otf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: NotoSansKR-Regular, "Arial","Roboto", "Helvetica Neue", sans-serif; }
+
+.mat-drawer-inner-container {
+    width: 200px !important;
+    background: #3d5cfc;
+}
+.mat-expansion-panel-content{
+    background: #3d5cfc ;
+  }
+  .mat-expansion-indicator::after{
+    color: #fff;
+  }
+  .mat-progress-spinner svg{
+    width: 121px !important;
+    height: 50px !important;
+  }
+
+
+  /* // new font css */
+
+  
+.nanum-square {
+    font-family: NanumSquare-Bold;
+}
+
+.poppins {
+    font-family: Poppins;
+}

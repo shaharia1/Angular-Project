@@ -1,0 +1,88 @@
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+import { PeriodicElement3 } from '../suspicious-transaction/suspicious-transaction.component';
+
+@Component({
+  selector: 'app-risk-management',
+  templateUrl: './risk-management.component.html',
+  styleUrls: ['./risk-management.component.css']
+})
+export class RiskManagementComponent implements OnInit, AfterViewInit  {
+
+  displayedColumns: string[] = ['GUID', 'TID', '일시', 'DetectType','거래코드','EDD진행여부','더보기'];
+  
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  
+  mode: ProgressSpinnerMode = 'determinate';
+  value = 80;
+  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  bt1: boolean = true;
+  bt2: boolean = false;
+  bt3: boolean = false;
+  bt4: boolean = false;
+
+  SuspiciousTransactionDetectionResult: boolean = false;
+  KoFIUSuspiciousTransaction: boolean = false;
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
+  btnClick(){
+    this.router.navigate(['/layout/customerDetails']);
+  }
+
+  clickedR(row: any){
+    console.log(row);
+    this.router.navigate(['/layout/CompanyInternalResidualRiskEntry'])
+  }
+
+  
+
+ 
+  
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+}
+
+
+
+export interface PeriodicElement {
+  TID: number;
+  GUID: number;
+  Third: string;
+  DetectType: string;
+  Five: string;  
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {GUID: 1, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'H',Five:'250sd'},
+  {GUID: 2, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'He',Five:'250sd'},
+  {GUID: 3, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Li',Five:'250sd'},
+  {GUID: 4, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Be',Five:'250sd'},
+  {GUID: 5, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'B',Five:'250sd'},
+  {GUID: 6, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'C',Five:'250sd'},
+  {GUID: 7, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'N',Five:'250sd'},
+  {GUID: 8, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'O',Five:'250sd'},
+  {GUID: 9, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'F',Five:'250sd'},
+  {GUID: 10, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Ne',Five:'250sd'},
+  {GUID: 11, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Na',Five:'250sd'},
+  {GUID: 12, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Mg',Five:'250sd'},
+  {GUID: 13, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Al',Five:'250sd'},
+  {GUID: 14, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Si',Five:'250sd'},
+  {GUID: 15, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'P',Five:'250sd'},
+  {GUID: 16, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'S',Five:'250sd'},
+  {GUID: 17, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Cl',Five:'250sd'},
+  {GUID: 18, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Ar',Five:'250sd'},
+  {GUID: 19, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'K',Five:'250sd'},
+  {GUID: 20, TID: 155, Third: '21. 6. 11  16:16:22', DetectType: 'Ca',Five:'250sd'},
+];
+
+

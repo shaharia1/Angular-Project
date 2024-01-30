@@ -1,0 +1,170 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="margin-top: 10px;"> <svg xmlns="http://www.w3.org/2000/svg" width="19" height="24"
+                    viewBox="0 0 19 24">
+                    <g id="Group_102" data-name="Group 102" transform="translate(-299 -183)">
+                        <circle id="Ellipse_1" data-name="Ellipse 1" cx="9.5" cy="9.5" r="9.5"
+                            transform="translate(299 183)" fill="#10449b" />
+                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="7" cy="7" r="7" transform="translate(299 193)"
+                            fill="#3d5cfc" />
+                    </g>
+                </svg>
+                <span> 원화 환산 가치 기반</span>
+
+            </h1>
+        </div>
+        <div class="col-md-6">
+            <p style="margin-left: 24px;">원화환산 총가치 기반한 변화비율 및 변화금액 표시화면</p>
+        </div>
+        <!-- <div class="col-md-6" align="right">
+            <p >검색된 인원수 : 31명</p>
+            <p >변화금액/비율 : 35% 변경하기</p>
+        </div> -->
+    </div>
+
+    
+
+
+    <div class="row">
+        <div class="col-md-12" align="right">
+
+            <button mat-raised-button style="background-color: #3a3a3a; padding: 1px 10px;" color="primary" [matMenuTriggerFor]="menu">
+                GUID 검색<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+              </mat-menu>
+              <span class="search">
+                <input type="text"><i (click)="printMsg()" class="material-icons">search</i>
+              </span>
+            <!-- <mat-form-field appearance="fill" >
+                <mat-label>Fill form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field> -->
+
+           
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-6" align="left">
+            날짜
+            <mat-button-toggle-group value="left">
+                <mat-button-toggle  value="left">당일</mat-button-toggle>
+                <mat-button-toggle  value="right">일주일</mat-button-toggle>
+                <mat-button-toggle  value="right">월</mat-button-toggle>
+               
+              </mat-button-toggle-group>
+
+           
+        </div>
+        <div class="col-md-6" align="right">
+            <ul id="menu">
+                <li>자산선택
+                    <button mat-raised-button style="background-color: #3a3a3a; padding: 1px 10px;" color="primary" [matMenuTriggerFor]="menu">
+                        KRW<mat-icon>keyboard_arrow_down</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>Redial</span>
+                        </button>
+                      </mat-menu>
+                </li>
+                <li>FDS
+                    <button mat-raised-button style="background-color: #3a3a3a; padding: 1px 10px;" color="primary" [matMenuTriggerFor]="menu">
+                        고액자산<mat-icon>keyboard_arrow_down</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>Redial</span>
+                        </button>
+                      </mat-menu>
+                </li>
+                
+
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mat-elevation-z2">
+                <table mat-table [dataSource]="dataSource">
+
+
+                    <!-- GUID Column -->
+                    <ng-container matColumnDef="GUID">
+                        <th mat-header-cell *matHeaderCellDef> GUID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.GUID}} </td>
+                    </ng-container>
+
+                    <!-- TID Column -->
+                    <ng-container matColumnDef="TID">
+                        <th mat-header-cell *matHeaderCellDef> TID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.TID}} </td>
+                    </ng-container>
+
+                    <!-- 일시 Column -->
+                    <ng-container matColumnDef="일시">
+                        <th mat-header-cell *matHeaderCellDef> 일시 </th>
+                        <td mat-cell *matCellDef="let element"> {{element.Third}} </td>
+                    </ng-container>
+
+                    <!-- DetectType Column -->
+                    <ng-container matColumnDef="DetectType">
+                        <th mat-header-cell *matHeaderCellDef> Detect Type </th>
+                        <td mat-cell *matCellDef="let element"> {{element.DetectType}} </td>
+                    </ng-container>
+
+                    <!-- 거래코드 Column -->
+                    <ng-container matColumnDef="거래코드">
+                        <th mat-header-cell *matHeaderCellDef> 거래 코드 </th>
+                        <td mat-cell *matCellDef="let element"> {{element.Five}} </td>
+                    </ng-container>
+
+                    <!-- EDD진행여부 Column -->
+                    <ng-container matColumnDef="EDD진행여부">
+                        <th mat-header-cell *matHeaderCellDef> EDD 진행여부 </th>
+                        <td mat-cell *matCellDef="let element">
+                            <a>
+                                <!-- (click)="openDialog('Update',element)" -->
+                                <button color="primary" (click)="btnClickEDD()" mat-raised-button
+                                    type="button">신청하기</button>
+                            </a>
+                        </td>
+                    </ng-container>
+
+                    <!-- 더보기 Column -->
+                    <ng-container matColumnDef="더보기">
+                        <th mat-header-cell *matHeaderCellDef> 더보기 </th>
+                        <td mat-cell *matCellDef="let element">
+                            <a>
+                                <!-- (click)="openDialog('Update',element)" -->
+                                <button color="primary" (click)="btnClickEDD1()" mat-raised-button
+                                    type="button">상세보기</button>
+                            </a>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+                </mat-paginator>
+            </div>
+        </div>
+    </div>
+
+</div>
